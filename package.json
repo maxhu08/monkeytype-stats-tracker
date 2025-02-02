@@ -3,8 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "fetch": "bun src/fetch.ts",
-    "csv": "bun src/csv.ts"
+    "start": "bun src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

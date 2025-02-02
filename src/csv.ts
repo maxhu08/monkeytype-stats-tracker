@@ -1,7 +1,6 @@
 import { mkdir, readdir, writeFile } from "fs/promises";
 
-const gencsv = async () => {
-  const date = "2025-02-02T19:51:46.251Z";
+export const generateCSV = async (date: string) => {
   const folderPath = `results/data/${date}`;
 
   const dir = `results/csv`;
@@ -36,6 +35,6 @@ const gencsv = async () => {
   }
 
   await writeFile(`results/csv/${date}.csv`, csvLines.join("\n"));
-};
 
-gencsv().catch(console.error);
+  console.log(`CSV saved to results/csv/${date}.csv`);
+};
