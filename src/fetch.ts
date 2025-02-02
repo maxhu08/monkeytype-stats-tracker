@@ -7,7 +7,7 @@ const users = usersInput
   .filter((line) => line !== "");
 
 const date = new Date().toISOString();
-const dir = `result/${date}`;
+const dir = `results/data/${date}`;
 await mkdir(dir, { recursive: true });
 
 for (const user of users) {
